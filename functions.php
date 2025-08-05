@@ -160,6 +160,17 @@ function diac_scripts() {
         $version,
         true
     );
+    wp_enqueue_script(
+        'calendar-filter-js',
+        get_template_directory_uri() . '/js/calendar-filter.js',
+        array('jquery'),
+        $version,
+        true
+    );
+	
+	wp_localize_script('calendar-filter-js', 'calendar_ajax_object', array(
+		'ajax_url' => admin_url('admin-ajax.php'),
+	));
 
     // Enqueue navigation JS
     wp_enqueue_script(
@@ -197,6 +208,12 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/calendar-ajax-handler.php';
+
 
 /**
  * Load Jetpack compatibility file.

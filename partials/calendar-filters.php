@@ -28,6 +28,7 @@
                                 <input
                                     type="checkbox"
                                     class="item-checkbox"
+                                    name="partner[]"
                                     value="<?php echo esc_attr($partner_name); ?>" />
                                 <span><?php echo esc_html($partner_name); ?></span>
                             </div>
@@ -40,7 +41,6 @@
                     <?php endif; ?>
                 </div>
             </div>
-
         </div>
         <div class="single-select">
             <div class="dropdown">
@@ -69,6 +69,7 @@
                                 <input
                                     type="checkbox"
                                     class="item-checkbox"
+                                    name="speaker[]"
                                     value="<?php echo esc_attr($partner_name); ?>" />
                                 <span><?php echo esc_html($partner_name); ?></span>
                             </div>
@@ -109,6 +110,7 @@
                             <div class="dropdown-item">
                                 <input
                                     type="checkbox"
+                                    name="event_theme[]"
                                     class="item-checkbox"
                                     value="<?php echo $term_slug; ?>" />
                                 <span><?php echo $term_name; ?></span>
@@ -147,6 +149,7 @@
                             <div class="dropdown-item">
                                 <input
                                     type="checkbox"
+                                    name="region[]"
                                     class="item-checkbox"
                                     value="<?php echo esc_attr($region->slug); ?>"
                                     id="region-<?php echo esc_attr($region->term_id); ?>" />
@@ -162,7 +165,7 @@
             </div>
         </div>
         <div class="input-search">
-            <input type="text" placeholder="Enter a keyword" />
+            <input type="text" name="search" placeholder="Enter a keyword" />
         </div>
     </form>
 </div>

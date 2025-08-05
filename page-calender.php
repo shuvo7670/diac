@@ -76,7 +76,7 @@ get_header();
         endif;
         ?>
 
-        <div class="list-events">
+        <div class="list-events" id="list-events">
             <?php
             $args = [
                 'post_type'      => 'events',
